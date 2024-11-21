@@ -1,0 +1,172 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Helvetica", sans-serif;
+}
+
+.full-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: #f8f8f8;
+  height: 8vh;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4vw 0 1vw;
+  font-size: 13px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 0vw;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Intro Section */
+.intro-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  background: rgb(255, 255, 255);
+  height: 92vh;
+  max-height: 92vh;
+}
+
+.intro-left {
+  width: 45%;
+  text-align: left;
+  position: relative;
+  padding-bottom: 6vh;
+}
+
+.big-intro-text {
+  font-size: 6vh;
+  margin-bottom: 10px;
+  margin-left: -3px;
+}
+
+
+.intro-buttons a {
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+.button {
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  padding: 1.3vh 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 1vh 1vw;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.button:hover {
+  background-color: #8e8e8e;
+}
+
+/* Gradient Container */
+.intro-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at 50% 50%, #ee7752, #e73c7e, #ff0bce);
+  animation: gradient 30s ease infinite;
+  background-size: 400% 400%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Typing Effect */
+.sulat {
+  border-right: 0.04em solid #000;
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 970px) {
+  .intro-section {
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .logo {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-left {
+    margin-bottom: 4vh;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 570px) {
+  .intro-section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .big-intro-text {
+    font-size: 4vh;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .intro-left {
+    padding: 0;
+    margin: 0;
+    padding-top: 2vh;
+    margin-bottom: 4vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .intro-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .intro-buttons {
+    width: auto;
+  }
+
+  .button:hover {
+    background-color: #000;
+  }
+
+  .intro-text {
+    text-align: center;
+    width: 100%;
+  }
+}
